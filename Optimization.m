@@ -2,7 +2,7 @@
 clear all; close all;
 
 %data.ws = [10,-0.1,0.1,-10];
-
+%cannot disclose data.mat and alpha data now. 
 load('data.mat');
 load('alpha1.mat');
 
