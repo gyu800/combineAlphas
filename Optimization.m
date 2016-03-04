@@ -41,7 +41,7 @@ bestSharpeR = calcSharpeR(bestAlpha);
 bestKratio = calcKratio(bestAlpha);
 bestMaxDD= calcMaxDD(bestAlpha);
 
-importfile('C:\Users\Gang\GoogleDrive2\20150113_strategy_data\strategy_data_20150113\data\simvars\dates\20131226_20131231\dates.adj_ammend.mat');    
+importfile('data.mat');    
 %t = 1:2013;
 %x = datenum(2006, 01, 03) + t;
 dates2 = num2str(dates);
@@ -55,7 +55,7 @@ end
     ylabel('Cumulative PnL') % y-axis label
     saveas(h,[alphaNames(i,:),'.jpg']);
 
-matfiles = dir(fullfile('C:', 'Users', 'Gang','GoogleDrive2','20150113_Strategy_Research_Project','All Alpha MAT Files','*.mat'));
+matfiles = dir(fullfile('C:', 'Users', 'Gang','GoogleDrive2','Strategy_Research_Project','All Alpha MAT Files','*.mat'));
 numAlpha = size(matfiles,1);
 for i = 1:numAlpha
     alphaNames(i) = cellstr(matfiles(i).name(1:end-10));
